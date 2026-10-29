@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vilas K N – AI Engineer, Bengaluru</title>
+<meta name="description" content="AI engineer building LLM agents that plan, act, validate their own output and recover from failure. Projects in agent orchestration, MLOps and applied ML.">
+<meta property="og:title" content="Vilas K N – AI Engineer">
+<meta property="og:description" content="LLM agents that check their own work. Projects, experience and code.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#16211D; --muted:#55645E; --line:#D5DDD8;
+  --accent:#2340D8; --accent-ink:#FFFFFF; --mark:#E8EDFF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101614; --surface:#18211E; --ink:#E9EFEC; --muted:#9BAAA3; --line:#2B3833; --accent:#8EA2FF; --accent-ink:#101614; --mark:#222C55}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 var(--body)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;padding:1.25rem 0;font-family:var(--display);font-weight:500;font-size:1rem}
+nav .name{font-weight:800;margin-right:auto;color:var(--ink);text-decoration:none}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--accent);text-decoration:underline}
+
+.hero{padding:4.5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.2rem);font-weight:800;max-width:15ch}
+.hero p.lead{max-width:38rem;font-size:1.3rem;color:var(--muted);margin:1.5rem 0 0}
+.loop{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:2.5rem 0 0;font-family:var(--display);font-weight:700}
+.loop span.step{padding:.55rem 1.1rem;border:2px solid var(--line);border-radius:999px;background:var(--surface);animation:glow 6s infinite}
+.loop span.step:nth-child(3){animation-delay:2s}
+.loop span.step:nth-child(5){animation-delay:4s}
+.loop span.sep{color:var(--muted)}
+.loop small{flex-basis:100%;font:italic 400 1rem var(--body);color:var(--muted);margin-top:.5rem}
+@keyframes glow{0%,30%{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}36%,100%{background:var(--surface);color:var(--ink);border-color:var(--line)}}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;font-family:var(--display);font-weight:700}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:8px;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.5rem}
+.sub{color:var(--muted);max-width:40rem;margin:0 0 2rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem 2rem}
+.skills h3{font-size:1.05rem;margin-bottom:.35rem}
+.skills p{margin:0;color:var(--muted);font-size:1.02rem;line-height:1.5}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(18.5rem,1fr));gap:1.5rem}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card h3{font-size:1.4rem;margin-bottom:.6rem}
+.card p{margin:0 0 1rem;font-size:1.02rem;line-height:1.55;color:var(--muted)}
+.card ul{margin:0 0 1.2rem;padding-left:1.1rem;font-size:1rem;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:auto 0 1rem;padding:0;list-style:none}
+.tags li{font:600 .82rem var(--display);padding:.2rem .6rem;border-radius:6px;background:var(--mark);color:var(--accent)}
+.repo{font:700 .98rem var(--display);color:var(--accent)}
+
+.job{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 2rem;padding:1.6rem 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.when{font:500 .95rem var(--display);color:var(--muted)}
+.job h3{font-size:1.25rem}
+.job .org{color:var(--muted);margin:.15rem 0 .6rem;font-size:1rem}
+.job ul{margin:0;padding-left:1.1rem;font-size:1.02rem;line-height:1.55}
+.job li{margin-bottom:.4rem}
+@media (max-width:640px){.job{grid-template-columns:1fr}}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2rem}
+.two h3{font-size:1.15rem;margin-bottom:.6rem}
+.two ul{margin:0;padding:0;list-style:none;font-size:1.02rem;line-height:1.5}
+.two li{margin-bottom:.7rem}
+.two li span{display:block;color:var(--muted);font-size:.95rem}
+
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.8rem}
+footer p{max-width:36rem;color:var(--muted);margin:0 0 1.5rem}
+footer small{display:block;margin-top:2.5rem;color:var(--muted);font-size:.9rem}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .loop span.step{animation:none}
+  .card{transition:none}.card:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav aria-label="Main">
+    <a class="name" href="#top">Vilas K N</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>I build LLM agents that check their own work.</h1>
+    <p class="lead">I’m Vilas, an AI engineer in Bengaluru. I design agents that plan, act, validate what they produced and recover when something fails, using locally hosted models and real tools like compilers and static analyzers as the judge.</p>
+    <div class="loop" aria-label="How my agents work: generate, verify, repair">
+      <span class="step">Generate</span><span class="sep" aria-hidden="true">&rarr;</span>
+      <span class="step">Verify</span><span class="sep" aria-hidden="true">&rarr;</span>
+      <span class="step">Repair</span>
+      <small>The loop behind my embedded C test-generation and MISRA compliance work.</small>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="https://github.com/Vilas147854" target="_blank" rel="noopener">GitHub profile</a>
+      <a class="btn ghost" href="mailto:vilas147854@gmail.com">Email me</a>
+    </div>
+  </div>
+
+  <section aria-labelledby="skills-h">
+    <div class="wrap">
+      <h2 id="skills-h">What I work with</h2>
+      <p class="sub">Python is my main language. The rest depends on the problem.</p>
+      <div class="skills">
+        <div><h3>Agentic AI</h3><p>Agent orchestration, context engineering, prompt engineering, LangChain, RAG, LLM APIs</p></div>
+        <div><h3>Model deployment</h3><p>Self-hosted models with Ollama and vLLM, Docker, Jenkins CI/CD</p></div>
+        <div><h3>ML and data</h3><p>Machine learning, Databricks MLOps, PySpark, ETL, Transformers, Power BI</p></div>
+        <div><h3>Languages</h3><p>Python, C, C++, SQL, PostgreSQL, JavaScript, PHP, HTML and CSS</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-h">
+    <div class="wrap">
+      <h2 id="projects-h">Projects</h2>
+      <p class="sub">Each card opens the repository on GitHub.</p>
+      <div class="projects">
+
+        <a class="card" href="https://github.com/Vilas147854/databricks-churn-mlops" target="_blank" rel="noopener">
+          <h3>Customer churn MLOps pipeline on Databricks</h3>
+          <p>An end-to-end workflow that takes raw telco customer data to scored predictions, with every model run tracked.</p>
+          <ul>
+            <li>Bronze, Silver and Gold Delta tables with a feature table</li>
+            <li>Random Forest tracked in MLflow: about 0.80 accuracy, 0.84 ROC AUC</li>
+            <li>Batch inference with run lineage, orchestrated by Databricks Jobs</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies"><li>Databricks</li><li>PySpark</li><li>MLflow</li><li>Delta Lake</li><li>scikit-learn</li></ul>
+          <span class="repo">View repository</span>
+        </a>
+
+        <a class="card" href="https://github.com/Vilas147854/Knowledge-Extraction-and-representation-from-online-meetings" target="_blank" rel="noopener">
+          <h3>Meeting knowledge extraction</h3>
+          <p>Upload a meeting recording and get back the transcript, a short summary, key points and a detailed explanation of what was discussed.</p>
+          <ul>
+            <li>Speech recognition turns the audio into text</li>
+            <li>Gemini API structures the text into points and summaries</li>
+            <li>Runs end to end in a Colab notebook</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies"><li>Whisper</li><li>Gemini API</li><li>Python</li><li>Colab</li></ul>
+          <span class="repo">View repository</span>
+        </a>
+
+        <a class="card" href="https://github.com/Vilas147854/credi_Reliability-" target="_blank" rel="noopener">
+          <h3>Credit reliability for rural India</h3>
+          <p>A model that predicts loan eligibility from income, assets, loan history and household details, aimed at financial inclusion.</p>
+          <ul>
+            <li>Cleaning, encoding, scaling and exploratory analysis</li>
+            <li>Compared Logistic Regression, Decision Tree, Random Forest and XGBoost</li>
+            <li>Random Forest reached 88% accuracy; income, credit history and asset value mattered most</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>XGBoost</li></ul>
+          <span class="repo">View repository</span>
+        </a>
+
+        <!-- EDIT ME: replace the text below with what this repo really does. If the repo is private, make it public on GitHub or delete this whole card. -->
+        <a class="card" href="https://github.com/Vilas147854/automation-two-way-sync-vilaskn" target="_blank" rel="noopener">
+          <h3>Automation: two-way sync</h3>
+          <p>Add a two or three sentence description of this project here: what it connects, what problem it solves and how you built it.</p>
+          <ul class="tags" aria-label="Technologies"><li>Python</li><li>Automation</li></ul>
+          <span class="repo">View repository</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <h2 id="exp-h">Experience</h2>
+      <p class="sub">Internship code is company work, so I describe it here instead of linking it.</p>
+
+      <div class="job">
+        <div class="when">Feb 2026 to Aug 2026</div>
+        <div>
+          <h3>AI Automation and CI/CD Intern</h3>
+          <p class="org">Avench Systems, Bengaluru</p>
+          <ul>
+            <li>Built a tool that generates unit tests for embedded C firmware with a locally hosted LLM (Qwen 2.5 Coder via Ollama). A context pipeline built on Clang AST analysis gives the model what it needs for each function.</li>
+            <li>Designed a generate, verify, repair loop that feeds real GCC and linker errors back to the model within a fixed retry limit, so one bad test never fails a whole file. Validated on a real STM32/HAL codebase.</li>
+            <li>Created an AI-assisted MISRA C compliance framework that pairs local LLMs with PC-Lint and AST parsing to find and fix violations, with GCC validation and automatic rollback so every fix keeps the program’s behavior.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jan 2025 to Dec 2025</div>
+        <div>
+          <h3>Guest Lecturer, Big Data and Machine Learning</h3>
+          <p class="org">Bangalore University, Bengaluru</p>
+          <ul>
+            <li>Taught Big Data and Theory of Computation to MCA students.</li>
+            <li>Ran machine learning labs and supervised student projects, turning theory into hands-on exercises.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Apr 2024 to Jul 2024</div>
+        <div>
+          <h3>Intern, Enterprise Performance Management</h3>
+          <p class="org">Donyati India Private Limited, Bengaluru</p>
+          <ul>
+            <li>Built a secure authentication platform and prepared datasets for enterprise reporting.</li>
+            <li>Contributed to OneStream EPM projects in an Agile team.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <div class="wrap">
+      <h2 id="edu-h">Education and certifications</h2>
+      <div class="two" style="margin-top:2rem">
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li>Master of Computer Applications, 2022 to 2024<span>Ramaiah Institute of Technology, CGPA 9.01</span></li>
+            <li>Bachelor of Computer Applications, 2019 to 2022<span>Vagdevi Vilas College, CGPA 9.03</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <ul>
+            <li>Advanced Machine Learning Operations<span>Databricks Academy, Nov 2025</span></li>
+            <li>Introduction to Large Language Models<span>NPTEL, IIT Madras, Nov 2025</span></li>
+            <li>UGC-NET Computer Science and Applications<span>Qualified, Sep 2024</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let’s talk</h2>
+    <p>I’m looking for AI engineering roles where agents have to be reliable on real tasks. The best way to reach me is email.</p>
+    <div class="actions" style="margin-top:0">
+      <a class="btn primary" href="mailto:vilas147854@gmail.com">vilas147854@gmail.com</a>
+      <a class="btn ghost" href="https://github.com/Vilas147854" target="_blank" rel="noopener">github.com/Vilas147854</a>
+    </div>
+    <small>Vilas K N, Bengaluru, Karnataka</small>
+  </div>
+</footer>
+</body>
+</html>
